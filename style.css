@@ -1,0 +1,584 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Assistant', sans-serif;
+  overflow-x: hidden;
+}
+.header {
+  min-height: 75vh;
+  background-color: #0074b7;
+  background-image: linear-gradient(to right, #003b73, #0074b7);
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden;
+  background-color: #2e2e2e; /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: none;
+  background-color: #2e2e2e;
+  font-size: 1.2vh;
+  text-align: center;
+  color: #ff4d50;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #2e2e2e;
+  height: 3vh;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+/* The Close Button */
+.close {
+  display: none;
+  color: #aaaaaa;
+  float: right;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #7ec8ec;
+  text-decoration: none;
+  cursor: pointer;
+}
+.scrollToTopBtn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0074b7;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+  opacity: 0;
+}
+.scrollToTopBtn:hover {
+  border-radius: 40%;
+
+}
+.text-box {
+  width: 25%;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  overflow: hidden;
+}
+.text-box h1 {
+  font-size: 80px;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.8;
+  padding-left: 10%;
+  padding-bottom: 10px;
+}
+.text-box h1::selection {
+  background: transparent;
+  color: #ffffff;
+}
+
+.text-box p {
+  margin: 10px 0 20px;
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.5;
+  padding-left: 10%;
+}
+.text-box p::selection {
+  background: transparent;
+  color: #ffffff;
+}
+#users {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.profilepic {
+  position: absolute;
+  border-radius: 20%;
+  height: 20vw;
+  width: 20vw;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 27.5%;
+}
+.profilepic::selection {
+  background: transparent;
+}
+.buttons {
+  padding-left: 10%;
+}
+.invite-btn {
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #1b83bf;
+  padding: 17px 29px;
+  position: center;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.invite-btn:hover {
+  letter-spacing: 1px;
+  cursor:default;
+  background: #015d91;
+  transition: 0.3s;
+}
+.invite-btn:not(:hover) {
+  transition: 0.3s;
+}
+.invite-btn::selection {
+  background: transparent;
+  color: white;
+}
+.featuresbtn {
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #3d3f49;
+  padding: 17px 29px;
+  position: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.featuresbtn:hover {
+  letter-spacing: 1.3px;
+  cursor:default;
+  background: #2e2e2e;
+  transition: 0.3s;
+}
+.featuresbtn:not(:hover) {
+  transition: 0.3s;
+}
+.featuresbtn::selection {
+  background: transparent;
+  color: white;
+}
+nav .fa-solid {
+  display: none;
+}
+
+/*features section*/
+.features {
+  height: auto;
+  width: 100%;
+  background: #09080d;
+  text-align: left;
+  padding-top: 200px;
+  overflow: hidden;
+}
+/*setup features*/
+.row-1 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 24vw;
+  padding-top: 20px;
+  width: 20vw;
+}
+.setup-features {
+  flex-basis: 30vw;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.setup-features h3 {
+  font-size: 1.5vw;
+  color: #ffffff;
+  padding-bottom: 45px;
+  font-weight: 500;
+}
+.setup-features h3::selection {
+  background: #09080d;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+.setup-features p {
+  font-size: 1.3vh;
+  color: #636363;
+}
+.setup-features p::selection {
+  background: #09080d;
+  color: #636363;
+}
+
+/*fun features*/
+.row-2 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 54vw;
+  padding-top: 300px;
+  width: 20vw;
+}
+.fun-features {
+  flex-basis: 30vw;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.fun-features h3 {
+  font-size: 1.5vw;
+  color: #ffffff;
+  padding-bottom: 45px;
+  padding-bottom: 45px;
+  font-weight: 500;
+}
+.fun-features h3::selection {
+  background: #09080d;
+  color: #ffffff;
+}
+.fun-features p {
+  font-size: 1.3vh;
+  color: #636363;
+}
+.fun-features p::selection {
+  background: #09080d;
+  color: #636363;
+}
+
+/*mod features*/
+.row-3 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 24vw;
+  padding-top: 300px;
+  width: 20vw;
+}
+.music-features {
+  flex-basis: 30vw;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.music-features h3 {
+  font-size: 1.5vw;
+  color: #ffffff;
+  padding-bottom: 45px;
+  font-weight: 500;
+}
+.music-features h3::selection {
+  background: #09080d;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+.music-features p {
+  font-size: 1.3vh;
+  color: #636363;
+}
+.music-features p::selection {
+  background: #09080d;
+  color: #636363;
+}
+
+/*util features*/
+.row-4 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 54vw;
+  padding-top: 300px;
+  padding-bottom: 200px;
+  width: 20vw;
+}
+.util-features {
+  flex-basis: 30vw;
+  border-radius: 10px;
+  margin: 1%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.util-features h3 {
+  font-size: 1.5vw;
+  color: #ffffff;
+  padding-bottom: 45px;
+  font-weight: 500;
+}
+.util-features h3::selection {
+  background: #09080d;
+  color: #ffffff;
+}
+.util-features p {
+  font-size: 1.3vh;
+  color: #636363;
+}
+.util-features p::selection {
+  background: #09080d;
+  color: #636363;
+}
+
+/*servers*/
+.servercount {
+  height: 135px;
+  width: 100%;
+  background: #1f2129;
+  overflow: hidden;
+}
+.servercountdiv {
+  position: absolute;
+  width: 25%;
+  left: 25%;
+  text-align: left;
+}
+.servercountdiv p {
+  font-size: 25px;
+  font-weight: 700;
+  float: left;
+  color: #ffffff;
+  padding-top: 50px;
+}
+.servericonsdiv {
+  width:auto;
+  height:auto;
+  display: flex;
+  float: right;
+  align-items: center;
+  list-style: none;
+  padding-top: 40px;
+  padding-right: 27.5%;
+  margin: 0px;
+  vertical-align: middle;
+}
+.servericon1 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(https://cdn.discordapp.com/icons/797833180936667153/c92526523d6cef618cedbceecb554df7.webp?size=4096)
+    center center / contain no-repeat;
+  padding: 0px;
+  border-radius: 10px;
+  margin-right: 35px;
+}
+.servericon2 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(https://cdn.discordapp.com/icons/824567517069836308/261bb9229413b4d51804f1fef28e569a.webp?size=4096)
+    center center / contain no-repeat;
+  padding: 0px;
+  border-radius: 10px;
+  margin-right: 35px;
+}
+.servericon3 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(https://cdn.discordapp.com/attachments/952975130932416512/981623963178385498/812638519393779712.webp?size=4096)
+    center center / contain no-repeat;
+  padding: 0px;
+  border-radius: 10px;
+  margin-right: 35px;
+}
+.servericon4 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(https://cdn.discordapp.com/icons/849816399085043743/8120c39eae81528cf6024e89fa54ca86.jpg?size=4096)
+    center center / contain no-repeat;
+  padding: 0px;
+  border-radius: 10px;
+  margin-right: 35px;
+}
+.servericon5 {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(https://cdn.discordapp.com/icons/678295162555858951/a_f31afe80975733b50e682a85630e0605.png?size=4096)
+    center center / contain no-repeat;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+
+/*footer*/
+.footer {
+  height: 200px;
+  width: 100vw;
+  background: #09080d;
+}
+.footerdiv {
+  height: auto;
+  text-align: left;
+  overflow: hidden;
+  margin-left: 25%;
+  margin-top: 125;
+}
+.footerdiv p {
+  font-size: 1.5vh;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.supportserverbtn {
+  display: inline-block;
+  font-size: 1vh;
+  border-radius: 7px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #212121;
+  padding: 7px 15px;
+  position: center;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+.supportserverbtn:hover {
+  background: #121212;
+}
+.topggbtn {
+  display: inline-block;
+  font-size: 1vh;
+  border-radius: 7px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #212121;
+  padding: 7px 15px;
+  position: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+.topggbtn:hover {
+  background: #121212;
+}
+
+/*mobile format*/
+@media (max-width: 1000px) {
+  .header {
+    background-size: 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .modal {
+    display: block;
+  }
+  .modal-content {
+    display: block;
+  }
+  .close {
+    display: block;
+  }
+  .text-box {
+    overflow-wrap: break-word;
+    width:auto;
+    left: 28%;
+    z-index:1;
+    position:absolute;
+  }
+  .text-box h1 {
+    font-size: 3vh;
+  }
+  .text-box p {
+    font-size: 1.5vh;
+    padding-bottom: 20px;
+    width: 50vw;
+  }
+  .profilepic {
+    height: 30vw;
+    width: 30vw;
+    right: 15%;
+    position:absolute;
+  }
+  .invite-btn {
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+    padding: 10px 15px;
+    position: center;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .featuresbtn {
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+    padding: 10px 15px;
+    position: center;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*servers*/
+  .servercountdiv {
+    position: absolute;
+    width: 25%;
+    left: 7%;
+    text-align: left;
+    width: auto;
+  }
+  .servercountdiv p {
+    font-size: 20px;
+    font-weight: 700;
+    float: left;
+    color: #ffffff;
+    padding-top: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .servericonsdiv {
+    padding-top: 40px;
+    padding-right: 5%;
+  }
+  .servericon1 {
+    width: 40px;
+    height: 40px;
+  }
+  .servericon2 {
+    width: 40px;
+    height: 40px;
+  }
+  .servericon3 {
+    width: 40px;
+    height: 40px;
+  }
+  .servericon4 {
+    width: 40px;
+    height: 40px;
+  }
+  .servericon5 {
+    width: 40px;
+    height: 40px;
+  }
+}
