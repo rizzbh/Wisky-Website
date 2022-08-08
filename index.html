@@ -1,0 +1,224 @@
+<html>
+  <head>
+    <meta name="author" content="Krustyy#7558" />
+    <meta name="description" content="A fun Discord Bot." />
+    <meta name="keywords" content="Wisk, Discord, Discord Wisk, Krustyy" />
+    <meta property="og:site_name" content="Wisk" />
+    <title>Wisk</title>
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="The multi-purpose Discord bot that makes discord fun and moderating easier."
+    />
+    <meta property="og:image" content="https://i.imgur.com/NdBavGT.png" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="382" />
+
+    <link rel="icon" href="https://i.imgur.com/NdBavGT.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:300,300italic,500,500italic,400,400italic,800,800italic,200,200italic,700,700italic,900,900italic%7CRubik:300,300italic,400,400italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>
+            This website is designed primarily for larger screens.<br />You can
+            use it anyways but please excuse any bugs :)
+          </p>
+        </div>
+      </div>
+
+      <div class="text-box">
+        <h1>Wisk.</h1>
+        <p>
+          Forget the need to setup your server by hand,<br>Wisk does it all for you while you can have fun with your friends!
+        </p>
+        <p id="users">Trusted by - users.</p>
+        <div class="buttons">
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=777481842303303700&permissions=304933760255&scope=bot%20applications.commands%20guilds%20identify"
+            class="invite-btn"
+            >Add to Discord</a
+          >
+          <a href="#features" class="featuresbtn">Features</a>
+        </div>
+      </div>
+      <div class="picture">
+        <img
+          class="profilepic"
+          src="https://cdn.discordapp.com/avatars/777481842303303700/a5f3c107e60802314ad248714946a7cb.png?size=1024"
+        />
+      </div>
+    </section>
+
+    <button class="scrollToTopBtn" id="scrollToTopBtn">
+      <i class="material-icons">arrow_upward</i>
+    </button>
+
+    <!--features section-->
+    <section class="features" id="features">
+      <div class="row-1">
+        <div class="setup-features">
+          <h3>Build your Server, Automatically!</h3>
+          <p>
+            Use some of the presets to set up channels and roles!
+            (This feature is currently unavailable due to bugs. I apologise for not being able to mantain the bot as I have been busy with school)
+          </p>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="fun-features">
+          <h3>Have some Fun!</h3>
+          <p>
+            Filled with tons of fun commands!<br>Have fun while the bot sets up your server!
+          </p>
+        </div>
+      </div>
+      <div class="row-3">
+        <div class="music-features">
+          <h3>Vibe with your friends.</h3>
+          <p>Play any music right inside the VC. (Coming soon)</p>
+        </div>
+      </div>
+      <div class="row-4">
+        <div class="util-features">
+          <h3>Create your own commands!</h3>
+          <p>Need more? Well you can always create a new command however you like! (Coming soon)</p>
+        </div>
+      </div>
+    </section>
+
+    <!--servers section-->
+    <section class="servercount">
+      <div class="servercountdiv">
+        <p id="servers">Used by - servers.</p>
+      </div>
+      <div class="servericonsdiv">
+        <ul class="servericons">
+          <li class="servericon1"></li>
+          <li class="servericon2"></li>
+          <li class="servericon3"></li>
+          <li class="servericon4"></li>
+          <li class="servericon5"></li>
+          <li class="servericon6"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+      <div class="footerdiv">
+        <p>© Wisk. All rights reserved.</p>
+        <div class="footerbuttons">
+          <a href="https://discord.gg/CKxGhSjtEU" class="supportserverbtn"
+            >Support Server</a
+          >
+          <a href="https://top.gg/bot/777481842303303700" class="topggbtn"
+            >Top.gg</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script>
+      //navlinks
+      var navLinks = document.getElementById("navlinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-20vh";
+      }
+
+      //scroll button
+      const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo(0, 0);
+      });
+      
+      window.onscroll = function(){
+        var y = window.scrollY;
+        if (y >= 800) {
+          scrollToTopBtn.style.opacity = 1;
+          scrollToTopBtn.style.bottom=10;
+        } else {
+          scrollToTopBtn.style.opacity = 0;
+          scrollToTopBtn.style.bottom=-20;
+        }
+      };
+
+      var modal = document.getElementById("myModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      
+      
+    </script>
+
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+        background: #414141;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 3px;
+        background: #414141;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #2e2e2e;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #212121;
+        transition: 0.3s;
+      }
+    </style>
+  </body>
+</html>
