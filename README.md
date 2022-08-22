@@ -1,2 +1,3 @@
 # Wisk-Website
-Home website of Wisk for Discord.
+Main website.
+https://krustyy03.github.io/Wisk-Website/
