@@ -31,7 +31,7 @@ html {
 .modal-content {
   display: none;
   background-color: #2e2e2e;
-  font-size: 1.2vh;
+  font-size: 16px;
   text-align: center;
   color: #ff4d50;
   margin: auto;
@@ -48,7 +48,7 @@ html {
   display: none;
   color: #aaaaaa;
   float: right;
-  font-size: 2vh;
+  font-size: 26px;
   font-weight: bold;
 }
 
@@ -214,7 +214,7 @@ nav .fa-solid {
   overflow: hidden;
 }
 .setup-features h3 {
-  font-size: 1.5vw;
+  font-size: 38px;
   color: #ffffff;
   padding-bottom: 45px;
   font-weight: 500;
@@ -225,7 +225,7 @@ nav .fa-solid {
   padding-bottom: 10px;
 }
 .setup-features p {
-  font-size: 1.3vh;
+  font-size: 17px;
   color: #636363;
 }
 .setup-features p::selection {
@@ -252,7 +252,7 @@ nav .fa-solid {
   overflow: hidden;
 }
 .fun-features h3 {
-  font-size: 1.5vw;
+  font-size: 38px;
   color: #ffffff;
   padding-bottom: 45px;
   padding-bottom: 45px;
@@ -263,7 +263,7 @@ nav .fa-solid {
   color: #ffffff;
 }
 .fun-features p {
-  font-size: 1.3vh;
+  font-size: 17px;
   color: #636363;
 }
 .fun-features p::selection {
@@ -290,7 +290,7 @@ nav .fa-solid {
   overflow: hidden;
 }
 .music-features h3 {
-  font-size: 1.5vw;
+  font-size: 38px;
   color: #ffffff;
   padding-bottom: 45px;
   font-weight: 500;
@@ -301,7 +301,7 @@ nav .fa-solid {
   padding-bottom: 10px;
 }
 .music-features p {
-  font-size: 1.3vh;
+  font-size: 17px;
   color: #636363;
 }
 .music-features p::selection {
@@ -329,7 +329,7 @@ nav .fa-solid {
   overflow: hidden;
 }
 .util-features h3 {
-  font-size: 1.5vw;
+  font-size: 38px;
   color: #ffffff;
   padding-bottom: 45px;
   font-weight: 500;
@@ -339,7 +339,7 @@ nav .fa-solid {
   color: #ffffff;
 }
 .util-features p {
-  font-size: 1.3vh;
+  font-size: 17px;
   color: #636363;
 }
 .util-features p::selection {
@@ -444,14 +444,14 @@ nav .fa-solid {
   margin-top: 125;
 }
 .footerdiv p {
-  font-size: 1.5vh;
+  font-size: 38px;
   font-weight: 500;
   color: #ffffff;
   opacity: 0.5;
 }
 .supportserverbtn {
   display: inline-block;
-  font-size: 1vh;
+  font-size: 13px;
   border-radius: 7px;
   text-decoration: none;
   color: #ffffff;
@@ -468,7 +468,7 @@ nav .fa-solid {
 }
 .topggbtn {
   display: inline-block;
-  font-size: 1vh;
+  font-size: 13px;
   border-radius: 7px;
   text-decoration: none;
   color: #ffffff;
