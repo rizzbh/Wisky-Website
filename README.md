@@ -1,2 +1,2 @@
 # Wisk-Website
-https://krustyy03.github.io/Wisk-Website/
+https://rizzbh.github.io/Wisky-Website/
